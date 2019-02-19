@@ -1,0 +1,5 @@
+{
+  "permissions": [
+    "http://localhost:8080"
+  ]
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    <form form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <mark>{{mLoginRequest.mobileNumber}}</mark><hr>
+        <div class="form-group">
+            <label for="mobile">Mobile Number&nbsp;*</label>
+            <input type="text" class="form-control" id="mobile" required
+                   [(ngModel)]="mLoginRequest.mobileNumber"
+                   #mobileNumber="ngForm"
+                   [class.is-valid]="mobileNumber.valid"
+                   [class.is-invalid]="!mobileNumber.valid"
+                   ngControl="mobileNumber">
+        </div>
+        <mark>{{mLoginRequest.password}}</mark><hr>
+        <div class="form-group">
+            <label for="password">Password&nbsp;*</label>
+            <input type="text" class="form-control" id="password" required
+                   [(ngModel)]="mLoginRequest.password"
+                   #password="ngForm"
+                   [class.is-valid]="password.valid"
+                   [class.is-invalid]="!password.valid"
+                   ngControl="password">
+
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <small class="col text-right">*&nbsp;Required</small>
+        </div>
+    </form>
+</div>
